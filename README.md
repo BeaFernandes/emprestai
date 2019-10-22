@@ -1,2 +1,3 @@
 # emprestai
--[] teste
+- [ ] teste
+- [x] alo
