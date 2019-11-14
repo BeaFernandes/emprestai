@@ -1,3 +1,6 @@
+html{
+    color: #4D4D4D;
+}
 
 body {
     display: flex;
@@ -6,7 +9,9 @@ body {
 }
 
 main {
+    overflow: hidden;
     flex: 1 0 auto;
+    width: 70%;
 }
 
 .main-space{
@@ -15,4 +20,28 @@ main {
 
 .teste{
     margin: 2em;
+}
+
+.logo{
+    width: 1em;
+    position: relative;
+    top: 5px;
+}
+
+.container{
+    overflow: hidden;
+}
+
+.atrasado{
+    background-color: rgb(253, 227, 227);
+}
+
+td{
+    border-top: solid #B3B3B3 1px;
+    border-radius: none;
+}
+
+th{
+    background-color: #F6F6F6;
+    
 }

@@ -6,45 +6,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="assets/libraries/materialize/css/materialize.min.css" media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="assets/resources/styles/style.css"/>
+    <link type="text/css" rel="stylesheet" href="assets/libraries/materialize/css/materialize.min.css"
+        media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="assets/resources/styles/style.css" />
+    <link rel="icon" type="imagem/png" href="favicon.png" />
 
 
 </head>
 
-<body style="overflow: hidden;">
+<body>
     <nav>
         <div class="nav-wrapper grey lighten-4">
-            <a href="#!" class="brand-logo teal-text text-lighten-2">
-                <i class="large material-icons">favorite</i>emprestaí</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger teal-text text-lighten-2"><i
-                    class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="badges.html" class="teal-text text-lighten-2">Components</a></li>
-                <li><a href="collapsible.html" class="teal-text text-lighten-2">Javascript</a></li>
-                <li><a href="mobile.html" class="teal-text text-lighten-2">Mobile</a></li>
-            </ul>
+            <div class="container">
+                <a href="index.html" class="brand-logo teal-text text-lighten-2">
+                    <img src="assets/resources/images/maos(512px).png" alt="Logo mãos e coração" class="logo">
+                    emprestaí</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger teal-text text-lighten-2"><i
+                        class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#" class="teal-text text-lighten-2">Sobre</a></li>
+                    <li><a href="#" class="teal-text text-lighten-2">Contato</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
     </ul>
 
     <header></header>
     <main class="row main-space">
-        <table class="striped highlight responsive-table col s12">
+        <table class="highlight responsive-table col s12">
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Item emprestado</th>
-                    <th>Data devolução</th>
-                    <th>Situação</th>
-                    <th class="center-align">Ver</th>
-                    <th class="center-align">Editar</th>
+                    <th class="teal-text text-lighten-2">Nome</th>
+                    <th class="teal-text text-lighten-2">Item emprestado</th>
+                    <th class="teal-text text-lighten-2">Data devolução</th>
+                    <th class="teal-text text-lighten-2">Situação</th>
+                    <th class="center-align teal-text text-lighten-2">Ver</th>
+                    <th class="center-align teal-text text-lighten-2">Editar</th>
                 </tr>
             </thead>
 
@@ -58,37 +60,38 @@
                     <td class="center-align teal-text text-lighten-2"><i class="material-icons">edit</i></td>
                 </tr>
                 <tr>
-                    <td>Alan</td>
-                    <td>Jellybean</td>
-                    <td>$3.76</td>
-                    <td>Alan</td>
+                    <td>João</td>
+                    <td>Livro</td>
+                    <td>20/12/2019</td>
+                    <td>Devolvido</td>
                     <td class="center-align teal-text text-lighten-2"><i class="material-icons">remove_red_eye</i></td>
                     <td class="center-align teal-text text-lighten-2"><i class="material-icons">edit</i></td>
                 </tr>
-                <tr>
-                    <td>Jonathan</td>
-                    <td>Lollipop</td>
-                    <td>$7.00</td>
-                    <td>Jonathan</td>
+                <tr class="atrasado">
+                    <td>Laura</td>
+                    <td>Livro</td>
+                    <td>20/12/2019</td>
+                    <td>Atrasado</td>
                     <td class="center-align teal-text text-lighten-2"><i class="material-icons">remove_red_eye</i></td>
                     <td class="center-align teal-text text-lighten-2"><i class="material-icons">edit</i></td>
                 </tr>
             </tbody>
         </table>
-        <a class="btn-floating btn-large waves-effect waves-light teal lighten-2 right teste"><i class="material-icons">add</i></a>
+        <a href="add.html" class="btn-floating btn-large waves-effect waves-light teal lighten-2 right teste"><i
+                class="material-icons">add</i></a>
 
     </main>
-        <footer class="page-footer teal lighten-3">
-            <div class="footer-copyright teal lighten-2">
-              <div class="container ">
-              © 2019 Copyright Beatriz
-              <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-              </div>
+    <footer class="page-footer teal lighten-3">
+        <div class="footer-copyright teal lighten-2">
+            <div class="container ">
+                © 2019 Copyright Beatriz
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
-        </footer>
+        </div>
+    </footer>
 
     <script type="text/javascript" src="assets/libraries/materialize/js/materialize.js"></script>
-    <script type="text/javascript" src="assets/resources/scripts/common.js"></script>
+    <script type="text/javascript" src="assets/resources/scripts/main.js"></script>
 </body>
 
 </html>
