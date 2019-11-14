@@ -1,4 +1,4 @@
-html{
+html, h4{
     color: #4D4D4D;
 }
 
@@ -15,11 +15,16 @@ main {
 }
 
 .main-space{
-    padding-top: 10%;
+    padding-top: 5%;
 }
 
-.teste{
+.space{
     margin: 2em;
+}
+
+.check-button{
+    position: relative;
+    left: 44%;
 }
 
 .logo{
