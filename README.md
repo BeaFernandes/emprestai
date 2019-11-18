@@ -25,7 +25,7 @@ Funções
 
 - [ ] Função anônima com argumento
 - [ ] Função anônima sem argumento
-- [ ] Função anônima com retorno
+- [ ] Função anônima sem retorno
 - [ ] Função anônima com retorno
 - [ ] Função auto-executável
 - [ ] Função com nome
@@ -44,7 +44,7 @@ Eventos
 
 Acesso aos elementos DOM do HTML
 
-- [ ] Via acesso direto pelo id do elemento HTML
+- [ ] Via referência DOM pelo id do elemento HTML
 - [ ] Via getElementByID()
 - [ ] Via getElementsByName()
 - [ ] Via getElementsByTagName()
@@ -61,9 +61,9 @@ Formulário
 
 - [ ] Validação de formulário com onsubmit usando os métodos tradicionais
 - [ ] Validação de formulário com HTML5 API
-- [ ] Customizar as mensagens nos balões de mensagem
-- [ ] Usar os atributos de validação dos inputs
-- [ ] Usar expressões regulares
+  - [ ] Customizar as mensagens nos balões de mensagem
+  - [ ] Usar os atributos de validação dos inputs
+  - [ ] Usar expressões regulares
 - [ ] Ler e escrever em elementos input com a propriedade value
 - [ ] Alterar o conteúdo de elementos div ou p com a propriedade innerHTML ou textContent
 - [ ] Manipulação de elemento de listagem, como checkbox, radio ou select
@@ -74,23 +74,13 @@ Objetos Nativos
 - [ ] Usar pelo menos 3 métodos de manipulação de array
 - [ ] Usar laço de repetição (for..in ou for..of ou forEach)
 - [ ] Usar pelo menos 3 métodos para manipulação de string
-- [ ] String Template xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- [ ] String Template
 
 Objetos
 
 - [ ] Criar objeto usando função construtora ou notação literal
-- [ ] Criar objetos a partir da definição de classes do ES6 ************
-- [ ] Usar herança prototipal nativa ou herança de classes do ES6 ************
-
-Canvas----------------------
-
-- [ ] Desenho de caminho ou arco ----------------------
-- [ ] Desenho de texto ou imagem ----------------------
-
-Animação----------------------
-
-- [ ] Por meio da manipulação do vetor images----------------------
-- [ ] Por meio da manipulação do canvas----------------------
+- [ ] Criar objetos a partir da definição de classes do ES6
+- [ ] Usar herança prototipal nativa ou herança de classes do ES6
 
 jQuery
 
@@ -101,14 +91,7 @@ jQuery
 - [ ] Especificar o tratador de algum evento via jQuery
 - [ ] Manipulação do CSS via função css() e addClass()/removeClass()
 - [ ] Manipulação do conteúdo de um input e div usando jQuery
-- [ ] Aplicar um plugin do jQuery (por exemplo, jQuery Mask Plugin************
-
-
-Manipular componentes do HTML5 API----------------------
-
-- [ ] map----------------------
-- [ ] online ou visibilidade----------------------
-- [ ] audio ou video----------------------
+- [ ] Aplicar um plugin do jQuery (por exemplo, jQuery Mask Plugin)
 
 Web Storage
 
