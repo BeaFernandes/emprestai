@@ -8,7 +8,7 @@ body {
     flex-direction: column;
 }
 
-main {
+main{
     overflow: hidden;
     flex: 1 0 auto;
     width: 70%;
@@ -53,8 +53,6 @@ th{
 
 .steper-label{
     font-size: 13px;
-    /*font-style: italic;
-    font-weight: bold;*/
 }
 
 .line{
