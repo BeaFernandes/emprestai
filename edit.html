@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>emprestaí</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="assets/libraries/materialize/css/materialize.min.css"
+        media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="assets/resources/styles/style.css" />
+    <link rel="icon" type="imagem/png" href="favicon.png" />
+
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper grey lighten-4">
+            <div class="container">
+                <a href="index.html" class="brand-logo teal-text text-lighten-2">
+                    <img src="assets/resources/images/maos(512px).png" alt="Logo mãos e coração" class="logo">
+                    emprestaí</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger teal-text text-lighten-2"><i
+                        class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#" class="teal-text text-lighten-2">Sobre</a></li>
+                    <li><a href="#" class="teal-text text-lighten-2">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+
+    <header></header>
+    <main class="row main-space">
+            <h4 class="header">Editar</h4>
+            <div class="row">
+                <form class="col s12">
+                    <div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="nome" type="text" class="validate" value="Mary Jane" autofocus>
+                                <label for="nome">Nome do amigo</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="telefone" type="tel" class="validate" value="(42) 999254-7887">
+                                <label for="telefone">Telefone</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="email" type="email" class="validate" value="mary@mail.com">
+                                <label for="email">Email</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="item-emprestado" type="text" class="validate" value="Livro">
+                                <label for="item-emprestado">Item emprestado</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="data-devolucao" type="text" class="datepicker validate" value="Dec 04, 2019">
+                                <label for="data-devolucao">Data de devolução</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="observacoes" type="text" class="validate" value="Livro está novo, sem sinal de uso">
+                                <label for="observacoes">Observações</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center-align">
+                            <button type="submit" class="btn-floating btn-large waves-effect waves-light teal lighten-2"><i
+                                    class="material-icons">check</i></button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    <footer class="page-footer teal lighten-3">
+        <div class="footer-copyright teal lighten-2">
+            <div class="container ">
+                © 2019 Copyright Beatriz
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="assets/libraries/materialize/js/materialize.js"></script>
+    <script type="text/javascript" src="assets/resources/scripts/main.js"></script>
+    <script src="assets/libraries/jquery/jquery-3.4.1.js"></script>
+</body>
+
+</html>

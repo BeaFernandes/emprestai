@@ -15,7 +15,7 @@ main {
 }
 
 .main-space{
-    padding-top: 5%;
+    padding-top: 2%;
 }
 
 .space{
@@ -49,4 +49,26 @@ td{
 th{
     background-color: #F6F6F6;
     
+}
+
+.steper-label{
+    font-size: 13px;
+    /*font-style: italic;
+    font-weight: bold;*/
+}
+
+.line{
+    position: absolute;
+    top: 40%;
+    width: 150px;
+}
+
+.link-table{
+    color: #4db6ac;
+}
+
+.view-title{
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 0.8em;
 }
