@@ -1,8 +1,17 @@
-$(function(){
-  $('btn-next').onclick = () => {
-      this.hide();
-      window.alert('teste');
-  }
+$(document).ready(function () { 
+  console.log("Ready?");
+  
+    $('#btn-next').click(() => {
+        $('#step-1').hide();
+        $('#btn-next').hide();
+        $('#step-2').show();
+        $('#btn-submit').show();
+    });
+
+    $('#btn-submit').submit((e) => {
+      e.preventDefault();
+        console.log('sub');
+    });
 });
 
 function $id(id){

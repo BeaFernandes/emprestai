@@ -4,12 +4,17 @@
 <head>
     <title>emprestaí</title>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="assets/libraries/materialize/css/materialize.min.css"
-        media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="assets/resources/styles/style.css" />
     <link rel="icon" type="imagem/png" href="favicon.png" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/libraries/materialize/css/materialize.css"
+        media="screen,projection"/>
+    <link rel="stylesheet" href="assets/resources/styles/style.css" />
+    
+    <script src="assets/libraries/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/libraries/materialize/js/materialize.js"></script>
 
 
 </head>
@@ -56,7 +61,7 @@
         <div class="row">
             <form class="col s12">
                 <h4 class="center-align">Novo empréstimo</h4>
-                <div class="step-1" >
+                <div id="step-1" >
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
@@ -82,7 +87,7 @@
                         <div class="col m2"></div>
                     </div>
                 </div>
-                <div class="step-2">
+                <div id="step-2" hidden>
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
@@ -108,12 +113,12 @@
                         <div class="col m2"></div>
                     </div>
                 </div>
-                <div class="center-align" hidden>
+                <div class="center-align" id="btn-next">
                         <div class="btn-floating btn-large waves-effect waves-light teal lighten-2"><i
                                 class="material-icons">check</i></div>
                 </div>
-                <div class="center-align" id="btn-next">
-                        <button type="submit" id="btn-submit" class="btn-floating btn-large waves-effect waves-light teal lighten-2"><i
+                <div class="center-align" id="btn-submit" hidden>
+                        <button type="submit"  class="btn-floating btn-large waves-effect waves-light teal lighten-2"><i
                                 class="material-icons">check</i></button>
                 </div>
             </form>
@@ -130,9 +135,7 @@
         </div>
     </footer>
 
-    <script type="text/javascript" src="assets/libraries/materialize/js/materialize.js"></script>
-    <script type="text/javascript" src="assets/resources/scripts/main.js"></script>
-    <script src="assets/libraries/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/resources/scripts/main.js"></script>
 </body>
 
 </html>
