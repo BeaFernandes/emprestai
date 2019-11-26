@@ -61,11 +61,11 @@
         <div class="row">
             <form class="col s12">
                 <h4 class="center-align">Novo empréstimo</h4>
-                <div id="step-1" >
+                <div id="step-1">
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
-                            <input id="nome" type="text" class="validate" autofocus>
+                            <input id="nome" type="text" class="validate" autofocus pattern="^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+ ?)*$" maxlength="50">
                             <label for="nome">Nome do amigo</label>
                         </div>
                         <div class="col m2"></div>
@@ -73,7 +73,7 @@
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
-                            <input id="telefone" type="tel" class="validate">
+                            <input id="telefone" type="tel" class="validate" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}">
                             <label for="telefone">Telefone</label>
                         </div>
                         <div class="col m2"></div>
@@ -81,7 +81,7 @@
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
-                            <input id="email" type="email" class="validate">
+                            <input id="email" type="email" class="validate" pattern="^(\w|\W)+@(\w+\.)+\w{3}(\.\w{2})?">
                             <label for="email">Email</label>
                         </div>
                         <div class="col m2"></div>
@@ -90,9 +90,18 @@
                 <div id="step-2" hidden>
                     <div class="row">
                         <div class="col m2"></div>
-                        <div class="input-field col m8">
-                            <input id="item-emprestado" type="text" class="validate">
+                        <div class="input-field col m4">
+                            <input id="item-emprestado" type="text" class="validate" pattern="^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+ ?)+$" maxlength="40">
                             <label for="item-emprestado">Item emprestado</label>
+                        </div>
+                        <div class="input-field col m4">
+                            <select>
+                                <option value="" disabled selected>Escolher categoria</option>
+                                <option value="1">Livros</option>
+                                <option value="2">Escritório</option>
+                                <option value="3">Alimento</option>
+                            </select>
+                            <label>Categoria</label>
                         </div>
                         <div class="col m2"></div>
                     </div>
@@ -107,7 +116,7 @@
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
-                            <input id="observacoes" type="text" class="validate">
+                            <input id="observacoes" type="text" class="validate" pattern="^(\w+) ?+" maxlength="60">
                             <label for="observacoes">Observações</label>
                         </div>
                         <div class="col m2"></div>
@@ -115,7 +124,7 @@
                 </div>
                 <div class="center-align" id="btn-next">
                         <div class="btn-floating btn-large waves-effect waves-light teal lighten-2"><i
-                                class="material-icons">check</i></div>
+                                class="material-icons">navigate_next</i></div>
                 </div>
                 <div class="center-align" id="btn-submit" hidden>
                         <button type="submit"  class="btn-floating btn-large waves-effect waves-light teal lighten-2"><i

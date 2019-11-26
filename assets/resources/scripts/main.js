@@ -18,7 +18,10 @@ window.onload = function(){
     $('#step-2').show();
     $('#btn-submit').show();
     $('#item-emprestado').focus();
-    $('#steper-step-1').text('').removeClass('uncomplete').append('<i class="material-icons">check</i>');
+    $('#steper-step-1').removeClass('uncomplete');
+    $('#steper-step-1').text('');
+    $('#steper-step-1').append('<i class="material-icons">check</i>');
+    //$('#steper-step-1').text('').removeClass('uncomplete').append('<i class="material-icons">check</i>');"Line is too long" CHECKED BY jshint
     $('#steper-step-2').removeClass('disabled').addClass('uncomplete');
   });
 
@@ -48,7 +51,10 @@ function $id(id){
 }
 
 
-
+$(document).ready(function(){
+  'use strict';
+  $('select').formSelect();
+});
 
 
 document.addEventListener('DOMContentLoaded', function() {
