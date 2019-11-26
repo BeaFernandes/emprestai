@@ -65,7 +65,7 @@
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
-                            <input id="nome" type="text" class="validate" autofocus pattern="^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+ ?)*$" maxlength="50">
+                            <input id="nome" type="text" class="validate" autofocus pattern="^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+ ?)*$" maxlength="50" required>
                             <label for="nome">Nome do amigo</label>
                         </div>
                         <div class="col m2"></div>
@@ -73,7 +73,7 @@
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
-                            <input id="telefone" type="tel" class="validate" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}">
+                            <input id="telefone" type="tel" class="validate" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" required>
                             <label for="telefone">Telefone</label>
                         </div>
                         <div class="col m2"></div>
@@ -91,7 +91,7 @@
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m4">
-                            <input id="item-emprestado" type="text" class="validate" pattern="^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+ ?)+$" maxlength="40">
+                            <input id="item-emprestado" type="text" class="validate" pattern="^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+ ?)+$" maxlength="40" required>
                             <label for="item-emprestado">Item emprestado</label>
                         </div>
                         <div class="input-field col m4">
@@ -127,7 +127,7 @@
                                 class="material-icons">navigate_next</i></div>
                 </div>
                 <div class="center-align" id="btn-submit" hidden>
-                        <button type="submit"  class="btn-floating btn-large waves-effect waves-light teal lighten-2"><i
+                        <button type="submit"  class="btn-floating btn-large waves-effect waves-light teal lighten-2 space"><i
                                 class="material-icons">check</i></button>
                 </div>
             </form>
@@ -145,6 +145,7 @@
     </footer>
 
     <script src="assets/resources/scripts/main.js"></script>
+    <script src="assets/resources/scripts/add.js"></script>
 </body>
 
 </html>
