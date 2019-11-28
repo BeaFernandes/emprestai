@@ -1,3 +1,7 @@
+(function(){
+  //colocar todo o codigo aqui Module pattern
+})();
+
 window.onload = function(){
   'use strict';
   document.forms[0].onsubmit = function(e){
@@ -26,7 +30,6 @@ window.onload = function(){
 
   let nome = $id('nome');
   nome.addEventListener('invalid', function(){
-    console.log("invalido bebe");
     if(nome.validity.valueMissing){
         nome.setCustomValidity("O nome não pode estar vazio");
     }
@@ -36,6 +39,9 @@ window.onload = function(){
   });
   $('#btn-next').click(() => {
     if($('#nome').val() === null || $('#nome').val() === ''){
+      return;
+    }
+    if($('#telefone').val() === null || $('#telefone').val() === ''){
       return;
     } 
     $('#step-1').hide();
