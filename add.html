@@ -73,7 +73,7 @@
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
-                            <input id="telefone" type="tel" class="validate" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" required>
+                            <input id="telefone" type="tel" class="validate" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" >
                             <label for="telefone">Telefone</label>
                         </div>
                         <div class="col m2"></div>
@@ -95,7 +95,7 @@
                             <label for="item-emprestado">Item emprestado</label>
                         </div>
                         <div class="input-field col m4">
-                            <select>
+                            <select id="select-categoria">
                                 <option value="" disabled selected>Escolher categoria</option>
                                 <option value="1">Livros</option>
                                 <option value="2">Escritório</option>
@@ -116,7 +116,7 @@
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
-                            <input id="observacoes" type="text" class="validate" pattern="^(\w+) ?+" maxlength="60">
+                            <input id="observacoes" type="text" class="validate" pattern="^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+ ?)+$" maxlength="60">
                             <label for="observacoes">Observações</label>
                         </div>
                         <div class="col m2"></div>
