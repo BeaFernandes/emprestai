@@ -47,15 +47,7 @@ function $query(selector){
   let itens = [];
   let emprestimos = [];
 
-  function dataAtualFormatada(){
-    let data = new Date();
-    
-    let dia  = data.getDate().toString().padStart(2, '0');
-    let mes  = (data.getMonth()+1).toString().padStart(2, '0'); 
-    let ano  = data.getFullYear();
-    
-    return `${dia}/${mes}/${ano}`;
-  }
+  
 
   window.onload = () => {
     document.forms[0].onsubmit = function(e){
@@ -78,7 +70,15 @@ function $query(selector){
       console.log(itens);
       
       let dataDevolucao = $id('data-devolucao').value;
-      let dataAtual =  dataAtualFormatada();
+      let dataAtual =  function(){
+        let data = new Date();
+
+        let dia  = data.getDate().toString().padStart(2, '0');
+        let mes  = (data.getMonth()+1).toString().padStart(2, '0'); 
+        let ano  = data.getFullYear();
+        
+        return `${dia}/${mes}/${ano}`;
+      }
 
       let obs = $id('observacoes').value;
 
@@ -110,7 +110,7 @@ function $query(selector){
     let nome = $id('nome');
     nome.addEventListener('invalid', function(){
       if(nome.validity.valueMissing){
-          nome.setCustomValidity("O nome não pode estar vazio");
+          nome.setCustomValidity("O nome não pode estar vazio");//string sigle quote CHECKED BY jshint
       }
       if(nome.validity.patternMismatch){
         nome.setCustomValidity("O nome deve possuir apenas letras");
