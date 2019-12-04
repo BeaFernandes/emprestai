@@ -1,14 +1,18 @@
-# emprestai
+# emprestaí
+
+Sistema para registrar coisas pessoais que foram emprestadas para alguém. Criado com finalidade acadêmica, para obtenção de nota na disciplina de web 2.
+
+# Check List
 
 Qualidade do código
 
 - [ ] Usar um Style Guide - apresentar o uso de pelo menos 10 regras do style escolhido (sugerido AirBnb)
 - [ ] Usar um lint - mostrar a correção de pelo menos 5 problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
-- [ ] Usar strict mode
-- [ ] Usar Module Pattern
+- [x] Usar strict mode
+- [x] Usar Module Pattern
 - [x] Usar pasta assets e subpastas resources e libraries para organizar o código
-- [ ] Usar let ao invés de var
-- [ ] Nomes de arquivos minúsculos e separados por hífen (dashed-case)
+- [x] Usar let ao invés de var
+- [x] Nomes de arquivos minúsculos e separados por hífen (dashed-case)
 
 Caixas de Diálogo
 
@@ -24,12 +28,12 @@ Temporizadores
 Funções
 
 - [ ] Função anônima com argumento
-- [ ] Função anônima sem argumento
+- [x] Função anônima sem argumento
 - [ ] Função anônima sem retorno
-- [ ] Função anônima com retorno
+- [x] Função anônima com retorno
 - [ ] Função auto-executável
 - [x] Função com nome
-- [ ] Função aninhada/local - declarar uma função dentro de outra
+- [x] Função aninhada/local - declarar uma função dentro de outra
 - [ ] Passagem de uma função como parâmetro
 - [x] Função Flecha - Arrow Function
 
@@ -53,8 +57,8 @@ Acesso aos elementos DOM do HTML
 Tratadores de Evento
 
 - [ ] Especificar o tratador de evento inline
-- [ ] Especificar o tratador de evento no carregamento da página HTML no modo tradicional - no onload
-- [ ] Especificar o tratador de evento no carregamento da página HTML com a função addEventListener - no onload
+- [x] Especificar o tratador de evento no carregamento da página HTML no modo tradicional - no onload
+- [x] Especificar o tratador de evento no carregamento da página HTML com a função addEventListener - no onload
 - [ ] Usar o operador this em funções tratadoras de eventos.
 
 Formulário
@@ -74,12 +78,12 @@ Objetos Nativos
 - [ ] Usar pelo menos 3 métodos de manipulação de array
 - [ ] Usar laço de repetição (for..in ou for..of ou forEach)
 - [ ] Usar pelo menos 3 métodos para manipulação de string
-- [ ] String Template
+- [x] String Template
 
 Objetos
 
-- [ ] Criar objeto usando função construtora ou notação literal
-- [ ] Criar objetos a partir da definição de classes do ES6
+- [x] Criar objeto usando função construtora ou notação literal
+- [x] Criar objetos a partir da definição de classes do ES6
 - [ ] Usar herança prototipal nativa ou herança de classes do ES6
 
 jQuery
