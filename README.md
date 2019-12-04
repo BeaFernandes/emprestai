@@ -1,5 +1,9 @@
 # emprestai
 
+Sistema para registrar coisas pessoais que foram emprestadas para alguém. Criado com finalidade acadêmica, para obtenção de nota na disciplina de web 2.
+
+# Check List
+
 Qualidade do código
 
 - [ ] Usar um Style Guide - apresentar o uso de pelo menos 10 regras do style escolhido (sugerido AirBnb)
