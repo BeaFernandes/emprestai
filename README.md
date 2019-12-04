@@ -1,4 +1,4 @@
-# emprestai
+# emprestaí
 
 Sistema para registrar coisas pessoais que foram emprestadas para alguém. Criado com finalidade acadêmica, para obtenção de nota na disciplina de web 2.
 
