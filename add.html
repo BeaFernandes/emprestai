@@ -4,45 +4,28 @@
 <head>
     <title>emprestaí</title>
     <meta charset="UTF-8">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="imagem/png" href="favicon.png" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="assets/libraries/materialize/css/materialize.css"
-        media="screen,projection"/>
+    <link rel="stylesheet" href="assets/libraries/materialize/css/materialize.css" media="screen,projection" />
     <link rel="stylesheet" href="assets/resources/styles/style.css" />
-    
+
     <script src="assets/libraries/jquery/jquery-3.4.1.js"></script>
     <script src="assets/libraries/materialize/js/materialize.js"></script>
 
-
+    <script>
+        $(function () {
+            $("#footer").load("footer.html");
+            $("#nav").load("nav.html");
+        });
+    </script>
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper grey lighten-4">
-            <div class="container">
-                <a href="index.html" class="brand-logo teal-text text-lighten-2">
-                    <img src="assets/resources/images/maos(512px).png" alt="Logo mãos e coração" class="logo">
-                    emprestaí</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger teal-text text-lighten-2"><i
-                        class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#" class="teal-text text-lighten-2">Sobre</a></li>
-                    <li><a href="#" class="teal-text text-lighten-2">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="nav"></div>
 
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-    </ul>
-
-    <header class="">
-    </header>
     <main class="row main-space">
 
         <div class="row steper">
@@ -65,16 +48,17 @@
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
-                            <input id="nome" type="text" class="validate" autofocus pattern="^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+ ?)*$" maxlength="50" required>
-                            <label for="nome">Nome do amigo</label>
+                            <input id="name" type="text" class="validate" autofocus
+                                pattern="^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+ ?)*$" maxlength="50" required>
+                            <label for="name">Nome do amigo</label>
                         </div>
                         <div class="col m2"></div>
                     </div>
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
-                            <input id="telefone" type="tel" class="validate" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" >
-                            <label for="telefone">Telefone</label>
+                            <input id="phone" type="tel" class="validate" pattern="\(\d{2}\)\s?\d{4,5}-\d{4}">
+                            <label for="phone">Telefone</label>
                         </div>
                         <div class="col m2"></div>
                     </div>
@@ -91,11 +75,12 @@
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m4">
-                            <input id="item-emprestado" type="text" class="validate" pattern="^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+ ?)+$" maxlength="40" required>
-                            <label for="item-emprestado">Item emprestado</label>
+                            <input id="item" type="text" class="validate"
+                                pattern="^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+ ?)+$" maxlength="40" required>
+                            <label for="item">Item emprestado</label>
                         </div>
                         <div class="input-field col m4">
-                            <select id="select-categoria">
+                            <select id="select-category">
                                 <option value="" disabled selected>Escolher categoria</option>
                                 <option value="1">Livros</option>
                                 <option value="2">Escritório</option>
@@ -108,43 +93,39 @@
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
-                            <input id="data-devolucao" type="text" class="datepicker validate">
-                            <label for="data-devolucao">Data de devolução</label>
+                            <input id="return-date" type="text" class="datepicker validate">
+                            <label for="return-date">Data de devolução</label>
                         </div>
                         <div class="col m2"></div>
                     </div>
                     <div class="row">
                         <div class="col m2"></div>
                         <div class="input-field col m8">
-                            <input id="observacoes" type="text" class="validate" pattern="^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+ ?)+$" maxlength="60">
-                            <label for="observacoes">Observações</label>
+                            <input id="notes" type="text" class="validate"
+                                pattern="^([A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+ ?)+$" maxlength="60">
+                            <label for="notes">Observações</label>
                         </div>
                         <div class="col m2"></div>
                     </div>
                 </div>
                 <div class="center-align" id="btn-next">
-                        <div class="btn-floating btn-large waves-effect waves-light teal lighten-2"><i
-                                class="material-icons">navigate_next</i></div>
+                    <div class="btn-floating btn-large waves-effect waves-light teal lighten-2"><i
+                            class="material-icons">navigate_next</i></div>
                 </div>
                 <div class="center-align" id="btn-submit" hidden>
-                        <button type="submit"  class="btn-floating btn-large waves-effect waves-light teal lighten-2 space"><i
-                                class="material-icons">check</i></button>
+                    <button type="submit"
+                        class="btn-floating btn-large waves-effect waves-light teal lighten-2 space"><i
+                            class="material-icons">check</i></button>
                 </div>
             </form>
 
         </div>
 
     </main>
-    <footer class="page-footer teal lighten-3">
-        <div class="footer-copyright teal lighten-2">
-            <div class="container ">
-                © 2019 Copyright Beatriz
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
 
-    <script src="assets/resources/scripts/main.js"></script>
+    <script src="db/data-access.js"></script>
+    <script src="assets/resources/scripts/common.js"></script>
     <script src="assets/resources/scripts/add.js"></script>
 </body>
 

@@ -1,76 +1,62 @@
-let Emprestimo = function(idEmprestimo, pessoa, item, dataAtual, dataDevolucao, obs){
+let Loan = function(loanId, person, item, currentDate, returnDate, notes){
   'use strict';
-  this.idEmprestimo = idEmprestimo;
-  this.pessoa = pessoa;
+  this.loanId = loanId;
+  this.person = person;
   this.item = item;
-  this.dataAtual = dataAtual;
-  this.dataDevolucao = dataDevolucao;
-  this.obs = obs;
-}
+  this.currentDate = currentDate;
+  this.returnDate = returnDate;
+  this.notes = notes;
+};
 
-class Pessoa {
-  constructor(idPessoa, nome, tel, email){
-    this.idPessoa = idPessoa;
-    this.nome = nome;
-    this.tel = tel;
+class Person {
+  constructor(personId, name, phone, email){
+    this.personId = personId;
+    this.name = name;
+    this.phone = phone;
     this.email = email;
   }
 }
 
 class Item {
-  constructor(idItem, nome, categoria){
-    this.idItem = idItem;
-    this.nome = nome;
-    this.categoria = categoria;
+  constructor(itemId, name, category){
+    this.itemId = itemId;
+    this.name = name;
+    this.category = category;
   }
 }
-
-function $id(id){
-  'use strict';
-  return document.getElementById(id);
-}
-
-function $query(selector){
-  'use strict';
-  return document.querySelector(selector);
-}
-
 
 (function(){
   'use strict';
 
-  let idPessoa = 0;
-  let idItem = 0;
-  let idEmprestimo = 0;
+  function $id(id){
+    return document.getElementById(id);
+  }
 
-  let pessoas = [];
-  let itens = [];
-  let emprestimos = [];
-
-  
-
-  window.onload = () => {
     document.forms[0].onsubmit = function(e){
       e.preventDefault();
       
-      let nome = $id('nome').value;
-      let tel = $id('telefone').value;
+      let name = $id('name').value;
+      let phone = $id('phone').value;
       let email = $id('email').value;
 
-      let pessoa = new Pessoa(idPessoa++, nome, tel, email);
-      pessoas.push(pessoa);
-      console.log(pessoas);
+      let personId = restore('personId');
+      let person = new Person(personId++, name, phone, email);
+      save('personId', personId);
+      console.log(person);
 
-      let nomeItem = $id('item-emprestado').value;
-      let categoria = $id('select-categoria');
-      categoria = categoria.options[categoria.selectedIndex].text;
+
+      let itemName = $id('item').value;
+      let category = $id('select-category');
+      category = category.options[category.selectedIndex].text;
       
-      let item = new Item(idItem++, nomeItem, categoria);
-      itens.push(item);
-      console.log(itens);
+
+      let itemId = restore('itemId');
+      let item = new Item(itemId++, itemName, category);
+      save('itemId', itemId);
+      console.log(item);
       
-      let dataDevolucao = $id('data-devolucao').value;
-      let dataAtual =  function(){
+      let returnDate = $id('return-date').value;
+      let currentDate =  function(){
         let data = new Date();
 
         let dia  = data.getDate().toString().padStart(2, '0');
@@ -78,56 +64,58 @@ function $query(selector){
         let ano  = data.getFullYear();
         
         return `${dia}/${mes}/${ano}`;
+      };
+
+      let notes = $id('notes').value;
+
+      let loanId = restore('loanId');
+      let emprestimo = new Loan(loanId++, person, item, currentDate, returnDate, notes);
+      save('loanId', loanId);
+      
+      saveLoan(emprestimo);
+      let continuar = confirm('Empréstimo cadastrado com sucesso! Deseja cadastrar novo?');
+      if(continuar){
+        window.location.href = 'add.html';
+      } else {
+        window.location.href = 'index.html';
       }
-
-      let obs = $id('observacoes').value;
-
-      let emprestimo = new Emprestimo(idEmprestimo++, pessoa, item, dataAtual, dataDevolucao, obs);
-      emprestimos.push(emprestimo);
-      console.log(emprestimos);
-      //let continuar = confirm('Empréstimo cadastrado com sucesso! Deseja cadastrar novo?');
-     // if(continuar){
-       // window.location.href = 'add.html';
-     // } else {
-      //  window.location.href = 'index.html';
-     // }
-    }
+    };
   
-    let tel = $id('telefone');
+    let tel = $id('phone');
     tel.addEventListener('invalid', function(){
       if(tel.validity.patternMismatch){
         tel.setCustomValidity('O telfeone deve seguir um padrão (00) 00000-0000');
       }    
     });
   
-    let item = $id('item-emprestado');
+    let item = $id('item');
     item.addEventListener('invalid', function(){
       if(item.validity.valueMissing){
         item.setCustomValidity('O nome do item não pode ser vazio');
       }    
     });
   
-    let nome = $id('nome');
+    let nome = $id('name');
     nome.addEventListener('invalid', function(){
       if(nome.validity.valueMissing){
-          nome.setCustomValidity("O nome não pode estar vazio");//string sigle quote CHECKED BY jshint
+          nome.setCustomValidity('O nome não pode estar vazio');//string sigle quote CHECKED BY jshint
       }
       if(nome.validity.patternMismatch){
-        nome.setCustomValidity("O nome deve possuir apenas letras");
+        nome.setCustomValidity('O nome deve possuir apenas letras');
     }
     });
     $('#btn-next').click(() => {
-      if($('#nome').val() === null || $('#nome').val() === ''){
+      if($('#name').val() === null || $('#name').val() === ''){
         return;
       }
-      //if($('#telefone').val() === null || $('#telefone').val() === ''){
+      //if($('#phone').val() === null || $('#phone').val() === ''){
      //   return;
       //} 
       $('#step-1').hide();
       $('#btn-next').hide();
       $('#step-2').show();
       $('#btn-submit').show();
-      $('#item-emprestado').focus();
+      $('#item').focus();
       $('#steper-step-1').removeClass('uncomplete');
       $('#steper-step-1').text('');
       $('#steper-step-1').append('<i class="material-icons">check</i>');
@@ -141,7 +129,7 @@ function $query(selector){
       $('#btn-submit').hide();
       $('#step-1').show();
       $('#btn-next').show();
-      $('#nome').focus();
+      $('#name').focus();
       $('#steper-step-2').addClass('uncomplete');
       $('#steper-step-1').addClass('uncomplete');
     });
@@ -151,11 +139,7 @@ function $query(selector){
       $('#btn-next').hide();
       $('#step-2').show();
       $('#btn-submit').show();
-      $('#item-emprestado').focus();
+      $('#item').focus();
       $('#steper-step-1').removeClass('uncomplete');
     });
-  }
-  
-  
-  $('select').formSelect();
 })();

@@ -5,107 +5,54 @@
     <title>emprestaí</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="assets/libraries/materialize/css/materialize.min.css"
-        media="screen,projection" />
-    <link type="text/css" rel="stylesheet" href="assets/resources/styles/style.css" />
     <link rel="icon" type="imagem/png" href="favicon.png" />
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="assets/libraries/materialize/css/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" href="assets/resources/styles/style.css" />
 
+    <script src="assets/libraries/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/libraries/materialize/js/materialize.js"></script>
+
+    <script>
+        $(function () {
+            $("#footer").load("footer.html");
+            $("#nav").load("nav.html");
+        });
+    </script>
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper grey lighten-4">
-            <div class="container">
-                <a href="index.html" class="brand-logo teal-text text-lighten-2">
-                    <img src="assets/resources/images/maos(512px).png" alt="Logo mãos e coração" class="logo">
-                    emprestaí</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger teal-text text-lighten-2"><i
-                        class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#" class="teal-text text-lighten-2">Sobre</a></li>
-                    <li><a href="#" class="teal-text text-lighten-2">Contato</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="nav"></div>
 
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Contato</a></li>
-    </ul>
-
-    <header></header>
     <main class="row main-space">
         <h4 class="header">Empréstimos</h4>
-        <table class="highlight responsive-table col s12">
+        <table id="loans-table" class="highlight responsive-table col s12">
             <thead>
                 <tr>
                     <th class="teal-text text-lighten-2">Nome</th>
                     <th class="teal-text text-lighten-2">Item emprestado</th>
                     <th class="teal-text text-lighten-2">Data devolução</th>
                     <th class="teal-text text-lighten-2">Situação</th>
-                    <th class="center-align teal-text text-lighten-2">Ver</th>
-                    <th class="center-align teal-text text-lighten-2">Editar</th>
+                    <th class="center-align teal-text text-lighten-2">Ações</th>   
+                    <th class="center-align teal-text text-lighten-2"></th>
                 </tr>
             </thead>
 
-            <tbody>
-                <tr>
-                    <td>Maria</td>
-                    <td>Livro</td>
-                    <td>20/12/2019</td>
-                    <td>Pendente</td>
-                    <td class="center-align">
-                        <a class="link-table" href="view.html"><i class="material-icons">remove_red_eye</i></a>
-                    </td>
-                    <td class="center-align">
-                        <a class="link-table" href="edit.html"><i class="material-icons">edit</i></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>João</td>
-                    <td>Livro</td>
-                    <td>20/12/2019</td>
-                    <td>Devolvido</td>
-                    <td class="center-align">
-                        <a class="link-table" href="#"><i class="material-icons">remove_red_eye</i></a>
-                    </td>
-                    <td class="center-align">
-                        <a class="link-table" href="#"><i class="material-icons">edit</i></a>
-                    </td>
-                </tr>
-                <tr class="atrasado">
-                    <td>Laura</td>
-                    <td>Livro</td>
-                    <td>20/12/2019</td>
-                    <td>Atrasado</td>
-                    <td class="center-align">
-                        <a class="link-table" href="#"><i class="material-icons">remove_red_eye</i></a>
-                    </td>
-                    <td class="center-align">
-                        <a class="link-table" href="#"><i class="material-icons">edit</i></a>
-                    </td>
-                </tr>
+            <tbody id="loans-table-body">
+                
             </tbody>
         </table>
         <a href="add.html" class="btn-floating btn-large waves-effect waves-light teal lighten-2 right space"><i
                 class="material-icons">add</i></a>
 
     </main>
-    <footer class="page-footer teal lighten-3">
-        <div class="footer-copyright teal lighten-2">
-            <div class="container ">
-                © 2019 Copyright Beatriz
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
 
-    <script type="text/javascript" src="assets/libraries/materialize/js/materialize.js"></script>
-    <script type="text/javascript" src="assets/resources/scripts/main.js"></script>
-    <script src="assets/libraries/jquery/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="db/data-access.js"></script>
+    <script type="text/javascript" src="assets/resources/scripts/common.js"></script>
+    <script type="text/javascript" src="assets/resources/scripts/index.js"></script>
+
 </body>
 
 </html>

@@ -47,7 +47,7 @@
   "strict": true,
 
   // Prohibit use of explicitly undeclared variables.
-  "undef": true,
+  "undef": false,
 
   // Warn when variables are defined but never used.
   "unused": true,
