@@ -16,7 +16,7 @@ Qualidade do código
 
 Caixas de Diálogo
 
-- [ ] prompt
+- [x] prompt
 - [x] alert
 - [x] confirm
 
@@ -27,7 +27,7 @@ Temporizadores
 
 Funções
 
-- [ ] Função anônima com argumento
+- [x] Função anônima com argumento
 - [x] Função anônima sem argumento
 - [X] Função anônima sem retorno
 - [x] Função anônima com retorno
