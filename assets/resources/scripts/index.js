@@ -21,7 +21,7 @@
                             <a class="link-table" onclick="edit(${loan.loanId})" href="#"><i class="material-icons">edit</i></a>
                         </td>
                         <td class="center-align">
-                            <a class="link-table" onclick="delete(${loan.loanId});" href="#"><i class="material-icons">delete</i></a>
+                            <a class="link-table" onclick="deleteItem(${loan.loanId})" href="#"><i class="material-icons">delete</i></a>
                         </td>
                     </tr>`;
             $id('loans-table-body').innerHTML += tr;
@@ -49,9 +49,14 @@
         }
     })();
 })();
-
 function edit(id){
     'use strict';
     localStorage.setItem('selectedId', id);
     window.location.href = 'edit.html';
+}
+
+function deleteItem(id){
+    'use strict';
+    deleteLoan(id);
+    window.location.href = 'index.html';
 }

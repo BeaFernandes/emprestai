@@ -14,13 +14,14 @@
 
     document.forms[0].onsubmit = (e) => {
         e.preventDefault();
-        alert(`você disparou o evento ${e.type}`);
-        console.log(e);
-        console.log('criar envio');
-    }
-
-    $id('name').onclick = (e) => {
-        alert(`você disparou o evento ${e.type}`);
-        console.log(e.type);
-    }
+        loan.person.name = $id('name').value;
+        loan.person.phone = $id('phone').value;
+        loan.person.email = $id('email').value;
+        loan.item.name = $id('item').value;
+        loan.returnDate = $id('return-date').value;
+        loan.notes = $id('notes').value;
+        updateLoan(loan);
+        alert('Dados alterados com sucesso!');   
+        window.location.href = 'index.html';
+    };
 })();
