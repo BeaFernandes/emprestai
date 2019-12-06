@@ -28,12 +28,6 @@ function deleteLoan(id){
 	'use strict';
     let loans = restoreLoans();
 	loans.splice(id, 1);
-	let loanId = restore('loanId');
-	let personId = restore('personId');
-	let itemId = restore('itemId');
-	save('loanId', loanId-1);
-	save('personId', personId-1);
-	save('itemId', itemId-1);
 	localStorage.setItem('loans', JSON.stringify(loans));
 }
 

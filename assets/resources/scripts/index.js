@@ -11,16 +11,16 @@
             let person = loan.person;
             let item = loan.item;
     
-            let tr = `<tr id="${loan.loanId}">
-                        <td>${person.name}</td>
-                        <td>${item.name}</td>    
-                        <td>${loan.returnDate}</td>
-                        <td id="situacao${loan.loanId}"></td> 
+            let tr = `<tr>
+                        <td onclick="view(${loans.indexOf(loan)})">${person.name}</td>
+                        <td onclick="view(${loans.indexOf(loan)})">${item.name}</td>    
+                        <td onclick="view(${loans.indexOf(loan)})">${loan.returnDate}</td>
+                        <td onclick="view(${loans.indexOf(loan)})" id="situacao${loan.loanId}"></td> 
                         <td class="center-align">
-                            <a class="link-table" onclick="edit(${loan.loanId})" href="#"><i class="material-icons">edit</i></a>
+                            <a class="link-table" onclick="edit(${loans.indexOf(loan)})" href="#"><i class="material-icons">edit</i></a>
                         </td>
                         <td class="center-align">
-                            <a class="link-table" onclick="deleteItem(${loan.loanId})" href="#"><i class="material-icons">delete</i></a>
+                            <a class="link-table" onclick="deleteItem(${loans.indexOf(loan)})" href="#"><i class="material-icons">delete</i></a>
                         </td>
                     </tr>`;
             $id('loans-table-body').innerHTML += tr;
@@ -50,10 +50,14 @@
 })();
 function edit(id){
     'use strict';
-    localStorage.setItem('selectedId', id);
+    save('selectedId', id);
     window.location.href = 'edit.html';
 }
-
+function view(id){
+    'use strict';
+    save('selectedId', id);
+    window.location.href = 'view.html';
+}
 function deleteItem(id){
     'use strict';
     deleteLoan(id);
