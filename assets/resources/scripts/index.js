@@ -1,11 +1,10 @@
 (function(){
     'use strict';
-
     let loans = restoreLoans();
     console.log(loans);
     (function setOnList(){
-        if(loans === []){
-            let warning = `<tr><td colspan="5" class="center">Não há dados a serem exibidos</td></tr>`;
+        if(loans.length === 0){
+            let warning = `<tr><td colspan="5" class="center">Não há empréstimos a serem exibidos</td></tr>`;
             $id('loans-table-body').innerHTML = warning;
         }
         for(let loan of loans){
