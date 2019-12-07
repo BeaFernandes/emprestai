@@ -32,6 +32,26 @@ class Item {
     return document.getElementById(id);
   }
 
+  $('#phone').mask('(00) 00000-0000');
+
+  setTimeout(() => {
+    alert('Seção expirada');
+    window.location.href = 'index.html';
+  }, 300000);
+
+  function letrasApenas(event){
+    let code = event.charCode;
+    if(!(code >= 97 && code <= 122 || code >= 65 && code <= 90 || code === 32 || code > 191 && code <= 255)){
+        event.preventDefault();
+    }
+  }
+  document.querySelector('#name').onkeypress = letrasApenas;
+
+  $id('item').onblur = function(){
+    let content = $id('item').value;
+    $id('item').value = content.toUpperCase();
+  };
+
     document.forms[0].onsubmit = function(e){
       e.preventDefault();
       
@@ -56,23 +76,29 @@ class Item {
       console.log(item);
       
       let returnDate = $id('return-date').value;
-      let currentDate =  function(){
-        let data = new Date();
 
+      function formatDate(f){
+        let data = f();
         let dia  = data.getDate().toString().padStart(2, '0');
         let mes  = (data.getMonth()+1).toString().padStart(2, '0'); 
         let ano  = data.getFullYear();
         
         return `${dia}/${mes}/${ano}`;
-      };
+      }
+
+      function curDate(){
+        return new Date();
+      }
+
+      let currentDate =  formatDate(curDate);
 
       let notes = $id('notes').value;
 
       let loanId = restore('loanId');
-      let emprestimo = new Loan(loanId++, person, item, currentDate, returnDate, notes);
+      let loan = new Loan(loanId++, person, item, currentDate, returnDate, notes);
       save('loanId', loanId);
-      
-      saveLoan(emprestimo);
+
+      saveLoan(loan);
       let continuar = confirm('Empréstimo cadastrado com sucesso! Deseja cadastrar novo?');
       if(continuar){
         window.location.href = 'add.html';
@@ -108,13 +134,12 @@ class Item {
       if($('#name').val() === null || $('#name').val() === ''){
         return;
       }
-      //if($('#phone').val() === null || $('#phone').val() === ''){
-     //   return;
-      //} 
-      $('#step-1').hide();
-      $('#btn-next').hide();
-      $('#step-2').show();
-      $('#btn-submit').show();
+      
+
+      $('#step-1').fadeOut(1000);
+      $('#btn-next').fadeOut(1000);
+      $('#step-2').fadeIn(3000);
+      $('#btn-submit').fadeIn(3000);
       $('#item').focus();
       $('#steper-step-1').removeClass('uncomplete');
       $('#steper-step-1').text('');
@@ -125,20 +150,20 @@ class Item {
     });
   
     $('#steper-step-1').click(function(){
-      $('#step-2').hide();
-      $('#btn-submit').hide();
-      $('#step-1').show();
-      $('#btn-next').show();
+      $('#step-2').fadeOut(1000);
+      $('#btn-submit').fadeOut(1000);
+      $('#step-1').fadeIn(3000);
+      $('#btn-next').fadeIn(3000);
       $('#name').focus();
       $('#steper-step-2').addClass('uncomplete');
       $('#steper-step-1').addClass('uncomplete');
     });
     
     $('#steper-step-2').click(function(){
-      $('#step-1').hide();
-      $('#btn-next').hide();
-      $('#step-2').show();
-      $('#btn-submit').show();
+      $('#step-1').fadeOut(1000);
+      $('#btn-next').fadeOut(1000);
+      $('#step-2').fadeIn(3000);
+      $('#btn-submit').fadeIn(3000);
       $('#item').focus();
       $('#steper-step-1').removeClass('uncomplete');
     });

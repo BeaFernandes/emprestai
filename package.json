@@ -1,0 +1,22 @@
+{
+  "name": "emprestai",
+  "version": "1.0.0",
+  "description": "Sistema para registrar coisas pessoais que foram emprestadas para alguém. Criado com finalidade acadêmica, para obtenção de nota na disciplina de web 2.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeaFernandes/emprestai.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BeaFernandes/emprestai/issues"
+  },
+  "homepage": "https://github.com/BeaFernandes/emprestai#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

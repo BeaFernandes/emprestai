@@ -1,5 +1,16 @@
 (function(){
     'use strict';
+
+    let counter = 60;
+    setInterval(count, 1000);
+
+    function count(){
+        if(counter >= 0)
+            $id('counter').innerHTML = counter--;
+        else
+            window.location.href = 'index.html';
+    }
+
     let loans = restoreLoans();
     console.log(loans);
     (function setOnList(){
@@ -11,7 +22,7 @@
             let person = loan.person;
             let item = loan.item;
     
-            let tr = `<tr>
+            let tr = `<tr id="${loans.indexOf(loan)}">
                         <td onclick="view(${loans.indexOf(loan)})">${person.name}</td>
                         <td onclick="view(${loans.indexOf(loan)})">${item.name}</td>    
                         <td onclick="view(${loans.indexOf(loan)})">${loan.returnDate}</td>
@@ -46,7 +57,7 @@
             } 
             $id(`situacao${loan.loanId}`).textContent = 'Pendente';
         }
-    })();
+    })(); 
 })();
 function edit(id){
     'use strict';

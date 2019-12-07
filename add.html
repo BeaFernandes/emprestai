@@ -14,6 +14,7 @@
 
     <script src="assets/libraries/jquery/jquery-3.4.1.js"></script>
     <script src="assets/libraries/materialize/js/materialize.js"></script>
+    <script src="assets/libraries/jQuery-Mask-Plugin-master/src/jquery.mask.js"></script>
 
     <script>
         $(function () {
@@ -42,7 +43,7 @@
         </div>
 
         <div class="row">
-            <form class="col s12" id="form">
+            <form class="col s12" id="form" onsubmit="return validacaoTradicional()">
                 <h4 class="center-align">Novo empréstimo</h4>
                 <div id="step-1">
                     <div class="row">
@@ -84,7 +85,9 @@
                                 <option value="" disabled selected>Escolher categoria</option>
                                 <option value="1">Livros</option>
                                 <option value="2">Escritório</option>
-                                <option value="3">Alimento</option>
+                                <option value="3">Cozinha</option>
+                                <option value="3">Instrumento</option>
+                                <option value="3">Eletrônico</option>
                             </select>
                             <label>Categoria</label>
                         </div>

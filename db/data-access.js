@@ -17,6 +17,18 @@ function saveLoan(loan) {
 	localStorage.setItem('loans', JSON.stringify(loans));
 }
 
+function saveJson(id, data) {
+    'use strict';
+
+	localStorage.setItem(id, JSON.stringify(data));
+}
+
+
+function restoreJson(id) {
+	'use strict';
+	return JSON.parse(localStorage.getItem(id));
+}
+
 function updateLoan(loan){
 	'use strict';
 	let loans = restoreLoans();
