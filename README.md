@@ -1,5 +1,7 @@
 # emprestaí
 
+GitHub Pages: https://beafernandes.github.io/emprestai/
+
 Sistema para registrar coisas pessoais que foram emprestadas para alguém. Criado com finalidade acadêmica, para obtenção de nota na disciplina de web 2.
 
 # Check List
@@ -22,8 +24,8 @@ Caixas de Diálogo
 
 Temporizadores
 
-- [ ] setInterval
-- [ ] setTimeout
+- [x] setInterval
+- [x] setTimeout
 
 Funções
 
@@ -34,15 +36,15 @@ Funções
 - [X] Função auto-executável
 - [x] Função com nome
 - [x] Função aninhada/local - declarar uma função dentro de outra
-- [ ] Passagem de uma função como parâmetro
+- [x] Passagem de uma função como parâmetro
 - [x] Função Flecha - Arrow Function
 
 Eventos
 
 - [x] Evento de carregamento do documento - onload
 - [ ] Evento de movimento do mouse
-- [ ] Evento de teclado - usar charCode ou keyCode
-- [ ] Eventos de formulário - onfocus e onblur
+- [x] Evento de teclado - usar charCode ou keyCode
+- [x] Eventos de formulário - onfocus e onblur
 - [ ] Imprimir alguma propriedade do objeto event recebido como parâmetro
 
 Acesso aos elementos DOM do HTML
@@ -51,7 +53,7 @@ Acesso aos elementos DOM do HTML
 - [x] Via getElementByID()
 - [ ] Via getElementsByName()
 - [ ] Via getElementsByTagName()
-- [ ] Via seletores CSS usados na função querySelector() ou querySelectorAll()
+- [x] Via seletores CSS usados na função querySelector() ou querySelectorAll()
 
 Tratadores de Evento
 
@@ -74,9 +76,9 @@ Formulário
 
 Objetos Nativos
 
-- [ ] Usar pelo menos 3 métodos de manipulação de array
+- [x] Usar pelo menos 3 métodos de manipulação de array
 - [x] Usar laço de repetição (for..in ou for..of ou forEach)
-- [ ] Usar pelo menos 3 métodos para manipulação de string
+- [x] Usar pelo menos 3 métodos para manipulação de string
 - [x] String Template
 
 Objetos
@@ -90,14 +92,18 @@ jQuery
 - [ ] Uso de seletores CSS - id, classe e tag
 - [x] Uso de seletores hierárquicos estáticos - ancestral/descendente, pai/filho, anterior/próximo
 - [ ] Uso de seletores hierárquicos dinâmicos - parent/children/next
-- [ ] Efeitos fade ou slide
+- [x] Efeitos fade ou slide
 - [x] Especificar o tratador de algum evento via jQuery
 - [x] Manipulação do CSS via função css() e addClass()/removeClass()
 - [x] Manipulação do conteúdo de um input e div usando jQuery
-- [ ] Aplicar um plugin do jQuery (por exemplo, jQuery Mask Plugin)
+- [x] Aplicar um plugin do jQuery (por exemplo, jQuery Mask Plugin)
 
 Web Storage
 
 - [x] LocalStorage ou SessionStorage
 - [x] Leitura e escrita de dados simples
 - [x] Leitura e escrita de JSON
+
+Bônus
+
+- [x] Implementação funcional (basta fazer funcionar uma requisição) do backend em ExpressJS na plataforma Node e requisições AJAX.
