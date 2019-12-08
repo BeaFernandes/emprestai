@@ -41,7 +41,8 @@ class Item {
 
   function letrasApenas(event){
     let code = event.charCode;
-    if(!(code >= 97 && code <= 122 || code >= 65 && code <= 90 || code === 32 || code > 191 && code <= 255)){
+    if(!(code >= 97 && code <= 122 || code >= 65 && code <= 90 || 
+      code === 32 || code > 191 && code <= 255)){
         event.preventDefault();
     }
   }
@@ -124,7 +125,7 @@ class Item {
     let nome = $id('name');
     nome.addEventListener('invalid', function(){
       if(nome.validity.valueMissing){
-          nome.setCustomValidity('O nome não pode estar vazio');//string sigle quote CHECKED BY jshint
+          nome.setCustomValidity('O nome não pode estar vazio');
       }
       if(nome.validity.patternMismatch){
         nome.setCustomValidity('O nome deve possuir apenas letras');
@@ -144,7 +145,6 @@ class Item {
       $('#steper-step-1').removeClass('uncomplete');
       $('#steper-step-1').text('');
       $('#steper-step-1').append('<i class="material-icons">check</i>');
-      //$('#steper-step-1').text('').removeClass('uncomplete').append('<i class="material-icons">check</i>');"Line is too long" CHECKED BY jshint
       $('#steper-step-2').removeClass('disabled').addClass('uncomplete');
       
     });

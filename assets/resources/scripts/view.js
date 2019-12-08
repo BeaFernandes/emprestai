@@ -1,5 +1,13 @@
 (function(){
     'use strict';
+
+    function isNull(data){
+        if(data === null){
+            return true;
+        }
+        return false;
+    }
+
     let loanId = restore('selectedId');
     let loan = restoreLoans('loans')[loanId];
     let person = loan.person;
@@ -13,10 +21,3 @@
     isNull($id('item')) ? '' : $id('item').innerHTML = item.name;
     isNull($id('notes')) ? '' : $id('notes').innerHTML = loan.notes;
 })();
-function isNull(data){
-    'use strict';
-    if(data === null){
-        return true;
-    }
-    return false;
-}

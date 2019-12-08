@@ -2,20 +2,22 @@
     'use strict';
 
     let counter = 60;
-    setInterval(count, 1000);
-
+    
     function count(){
         if(counter >= 0)
-            $id('counter').innerHTML = counter--;
+        $id('counter').innerHTML = counter--;
         else
-            window.location.href = 'index.html';
+        window.location.href = 'index.html';
     }
+    
+    setInterval(count, 1000);
 
     let loans = restoreLoans();
     console.log(loans);
     (function setOnList(){
         if(loans.length === 0){
-            let warning = `<tr><td colspan="5" class="center">Não há empréstimos a serem exibidos</td></tr>`;
+            let warning = `<tr><td colspan="5" class="center">Não há empréstimos 
+            a serem exibidos</td></tr>`;
             $id('loans-table-body').innerHTML = warning;
         }
         for(let loan of loans){
@@ -28,10 +30,14 @@
                         <td onclick="view(${loans.indexOf(loan)})">${loan.returnDate}</td>
                         <td onclick="view(${loans.indexOf(loan)})" id="situacao${loan.loanId}"></td> 
                         <td class="center-align">
-                            <a class="link-table" onclick="edit(${loans.indexOf(loan)})" href="#"><i class="material-icons">edit</i></a>
+                            <a class="link-table" onclick="edit(${loans.indexOf(loan)})" href="#">
+                                <i class="material-icons">edit</i>
+                            </a>
                         </td>
                         <td class="center-align">
-                            <a class="link-table" onclick="deleteItem(${loans.indexOf(loan)})" href="#"><i class="material-icons">delete</i></a>
+                            <a class="link-table" onclick="deleteItem(${loans.indexOf(loan)})" href="#">
+                                <i class="material-icons">delete</i>
+                            </a>
                         </td>
                     </tr>`;
             $id('loans-table-body').innerHTML += tr;
