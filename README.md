@@ -8,8 +8,8 @@ Sistema para registrar coisas pessoais que foram emprestadas para alguém. Criad
 
 Qualidade do código
 
-- [ ] Usar um Style Guide - apresentar o uso de pelo menos 10 regras do style escolhido (sugerido AirBnb)
-- [ ] Usar um lint - mostrar a correção de pelo menos 5 problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
+- [x] Usar um Style Guide - apresentar o uso de pelo menos 10 regras do style escolhido (sugerido AirBnb)
+- [x] Usar um lint - mostrar a correção de pelo menos 5 problemas informados pelo lint (sugerido JSHint - usar o arquivo .jshintrc disponível no moodle)
 - [x] Usar strict mode
 - [x] Usar Module Pattern
 - [x] Usar pasta assets e subpastas resources e libraries para organizar o código
